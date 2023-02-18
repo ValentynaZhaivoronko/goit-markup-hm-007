@@ -1,3 +1,4 @@
+@media screen and (min-width: 1200px) {
 .list {
     list-style: none;
 }
@@ -74,10 +75,28 @@ button {
     color: var(--button-mein-background);
 }
 
-
-
 /*======== /components======== */
 /*======== header======== */
+
+
+
+        .container {
+                padding-left: 15px;
+                padding-right: 15px;
+                width: 1440px;
+                width: 100%;
+                height: 100%;
+                margin-left: auto;
+                margin-right: auto;
+        }
+
+        .mobile-menu {
+                display: none;
+        }
+
+        .btn-menu-mobile {
+                display: none;
+        }
 
 .page-header-container,
 .page-nav-container,
@@ -99,10 +118,6 @@ button {
 .menu-item-header:not(:last-child) {
         margin-right: 40px;
 }
-
-/* .menu-item-header {
-        height: auto;
-} */
 
 .kontackt {
         margin-left: auto;
@@ -173,13 +188,19 @@ color: var(--link-active-text-color);
         height: 600px;
         margin-left: auto;
         margin-right: auto;
-        max-width: 1440px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         background-color: var(--primary-text-color);
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/deco-elements/people-office.jpg);
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),  url(../images/deco-elements/people-office.jpg);
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+        .overlay {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/people-office-1_desk_@2x.jpg);
+        }
 }
 /*======== /overlay======== */
 
@@ -242,8 +263,6 @@ color: var(--link-active-text-color);
         
 }
 
-
-
 .list-about-cotainer {
         display: flex;
         align-items: center;
@@ -252,8 +271,6 @@ color: var(--link-active-text-color);
 .list-about:not(:last-child) {
         margin-right: 24px;
 }
-
-
 
 .title-about {
         font-weight: 500;
@@ -971,3 +988,4 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 
 /* ========section-team-card======== */
 
+}

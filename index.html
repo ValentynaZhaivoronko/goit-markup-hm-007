@@ -15,7 +15,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mobile.style.css" />
+    <link rel="stylesheet" href="./css/tablete.style.css" />
+    <link rel="stylesheet" href="./css/desktop.style.css" />
   </head>
   <body>
     <!-- header -->
@@ -37,6 +39,11 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="button btn-menu-mobile" data-menu-open>
+          <svg class="icon-burger" width="32" height="22">
+            <use href="./images/deco-elements/sprite.svg.svg#icon-menu"></use>
+          </svg>
+        </button>
         <address class="kontackt">
           <ul class="list kontakt-header-kontainer">
             <li>
@@ -51,6 +58,85 @@
             </li>
           </ul>
         </address>
+      </div>
+      <div class="mobile-menu" data-menu>
+        <div class="container container-mobile">
+          <button
+            type="button"
+            class="button button-close-mobile"
+            data-menu-close
+          >
+            <svg width="8" height="8">
+              <use
+                href="./images/deco-elements/sprite.svg.svg#icon-close-black"
+              ></use>
+            </svg>
+          </button>
+          <ul class="nav-mobile">
+            <li class="list nav-mobile-item">
+              <a class="link menu-item-header-mobile" href="./index.html"></a
+              >Studio
+            </li>
+            <li class="list nav-mobile-item">
+              <a
+                class="link menu-item-header-mobile"
+                href="./portfolio.html"
+              ></a
+              >Portfolio
+            </li>
+            <li class="list nav-mobile-item">
+              <a class="link menu-item-header-mobile" href=""></a>Contacts
+            </li>
+          </ul>
+          <div class="mobile-menu-second">
+            <ul class="adress-mobile">
+              <li class="list adress-mobile-item">
+                <a class="link tel-numer-mobile" href="tel:110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="list adress-mobile-item">
+                <a class="link imail-mobile" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="sosial-mobile">
+              <li class="list sosial-mobile-item">
+                <a class="social-mobile-link" href=""
+                  ><svg class="social-mobile-icon" width="24" height="24">
+                    <use
+                      href="./images/deco-elements/sprite.svg.svg#icon-instagramsvg"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="list sosial-mobile-item">
+                <a class="social-mobile-link" href=""
+                  ><svg class="social-mobile-icon" width="24" height="24">
+                    <use
+                      href="./images/deco-elements/sprite.svg.svg#icon-twittersvg"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="list sosial-mobile-item">
+                <a class="social-mobile-link" href=""
+                  ><svg class="social-mobile-icon" width="24" height="24">
+                    <use
+                      href="./images/deco-elements/sprite.svg.svg#icon-facebook"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="list sosial-mobile-item">
+                <a class="social-mobile-link" href=""
+                  ><svg class="social-mobile-icon" width="24" height="24">
+                    <use
+                      href="./images/deco-elements/sprite.svg.svg#icon-linkedinsvg"
+                    ></use></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -106,31 +192,85 @@
           <h2 class="title-section">What are we doing</h2>
           <ul class="list list-product">
             <li class="menu-item">
-              <img
-                class="img-product"
-                src="./images/monitor.img.jpg"
-                alt="monitor"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/product/monitor_@1x.webp 1x,
+                    ./image/product/monitor_@2x.webp  2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/product/monitor_@1x.jpg 1x,
+                    ./images/product/monitor_@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="img-product"
+                  src="./images/monitor.img.jpg"
+                  alt="monitor"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
             <li class="menu-item">
-              <img
-                class="img-product"
-                src="./images/mobil.img.jpg"
-                alt="mobil"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/product/mobil_@1x.webp 1x,
+                    ./image/product/mobil_@2x.webp  2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/product/mobil_@1x.jpg 1x,
+                    ./images/product/mobil_@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="img-product"
+                  src="./images/mobil.img.jpg"
+                  alt="mobil"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
             <li class="menu-item">
-              <img
-                class="img-product"
-                src="./images/mobil-laptop.img.jpg"
-                alt="mobil and laptop"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/product/mobil-laptop_@1x.webp 1x,
+                    ./image/product/mobil-laptop_@2x.webp  2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/product/mobil-laptop_@1x.jpg 1x,
+                    ./images/product/mobil-laptop_@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="img-product"
+                  src="./images/mobil-laptop.img.jpg"
+                  alt="mobil and laptop"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -141,13 +281,32 @@
           <h2 class="title-section">Our Team</h2>
           <ul class="list our-team-list">
             <li class="menu-item-team">
-              <img
-                class="img-team"
-                src="./images/mark-guerrero.img.jpg"
-                alt="Mark Guerrero"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/our-team/mark-guerrero.img@1x.webp.webp 1x,
+                    ./images/our-team/img-mark@2x.webp.webp          2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/our-team/mark-guerrero.img@1x.jpg 1x,
+                    ./images/our-team/img-mark@2x.jpg          2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="img-team"
+                  src="./images/our-team/mark-guerrero.img@1x.jpg"
+                  alt="Mark Guerrero"
+                  width="264"
+                  height="260"
+                />
+              </picture>
+
               <div class="name-team-profession">
                 <h3 class="name-team">Mark Guerrero</h3>
                 <p class="profession-team">Product Designer</p>
@@ -200,13 +359,31 @@
               </div>
             </li>
             <li class="menu-item-team">
-              <img
-                class="img-team"
-                src="./images/tom-ford.img.jpg"
-                alt="Tom Ford"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/our-team/tom-ford.img@1x.webp.webp 1x,
+                    ./images/our-team/img-tom@2x.webp.webp      2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/our-team/tom-ford.img@1x.jpg 1x,
+                    ./images/our-team/img-tom@2x.jpg      2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="img-team"
+                  src="./images/our-team/tom-ford.img@1x.jpg"
+                  alt="Tom Ford"
+                  width="264"
+                  height="260"
+                />
+              </picture>
               <div class="name-team-profession">
                 <h3 class="name-team">Tom Ford</h3>
                 <p class="profession-team">Frontend Developer</p>
@@ -259,13 +436,31 @@
               </div>
             </li>
             <li class="menu-item-team">
-              <img
-                class="img-team"
-                src="./images/camila-garcia.img.jpg"
-                alt="Camila Garcia"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/our-team/camila-garcia.img@1x.webp.webp 1x,
+                    ./images/our-team/imgcamila@2x.webp.webp         2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/our-team/camila-garcia.img@1x.jpg 1x,
+                    ./images/our-team/imgcamila@2x.jpg         2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="img-team"
+                  src="./images/our-team/camila-garcia.img@1x.jpg"
+                  alt="Camila Garcia"
+                  width="264"
+                  height="260"
+                />
+              </picture>
               <div class="name-team-profession">
                 <h3 class="name-team">Camila Garcia</h3>
                 <p class="profession-team">Marketing</p>
@@ -318,13 +513,31 @@
               </div>
             </li>
             <li class="menu-item-team">
-              <img
-                class="img-team"
-                src="./images/daniel-wilson.img.jpg"
-                alt="Daniel Wilson"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/our-team/daniel-wilson.img@1x.webp.webp 1x,
+                    ./images/our-team/img_daniel@2x.webp.webp        2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/our-team/daniel-wilson.img@1x.jpg 1x,
+                    ./images/our-team/img_daniel@2x.jpg        2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="img-team"
+                  src="./images/our-team/daniel-wilson.img@1x.jpg"
+                  alt="Daniel Wilson"
+                  width="264"
+                  height="260"
+                />
+              </picture>
               <div class="name-team-profession">
                 <h3 class="name-team">Daniel Wilson</h3>
                 <p class="profession-team">UI Designer</p>
@@ -451,7 +664,7 @@
         </div>
         <div class="footer-social">
           <p class="footer-title"><b>Social media</b></p>
-          <ul class="list">
+          <ul class="list footer-list-ul">
             <li class="footer-list">
               <a class="footer-link" href="" rel="noopener noreferrer"
                 ><svg class="footer-icon" width="16" height="16">
@@ -559,8 +772,9 @@
             <svg class="svg-agree" width="16" height="16">
               <use
                 href="./images/deco-elements/sprite.svg.svg#icon-i-agree"
-              ></use></svg
-            ><span class="i-agree"
+              ></use>
+            </svg>
+            <span class="i-agree"
               >I accept the terms and conditions of the&nbsp
             </span>
             <a class="link-modal">Privacy Policy</a>
@@ -569,6 +783,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
