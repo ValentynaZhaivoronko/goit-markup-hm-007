@@ -79,17 +79,6 @@ button {
 /*======== header======== */
 
 
-
-        .container {
-                padding-left: 15px;
-                padding-right: 15px;
-                width: 1440px;
-                width: 100%;
-                height: 100%;
-                margin-left: auto;
-                margin-right: auto;
-        }
-
         .mobile-menu {
                 display: none;
         }
@@ -104,6 +93,12 @@ button {
 .kontakt-header-kontainer {
         display: flex;
         align-items: center;
+}
+
+.page-header-container {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
 }
 
 .page-header {
@@ -184,8 +179,8 @@ color: var(--link-active-text-color);
 /*======== /header======== */
 
 /*======== overlay======== */
+
 .overlay {
-        height: 600px;
         margin-left: auto;
         margin-right: auto;
         background-position: center;
@@ -217,6 +212,7 @@ color: var(--link-active-text-color);
         margin-right: auto;
         text-align: center;
 }
+
 
 .hero {
         background-color: var(--primary-text-color);
@@ -533,6 +529,10 @@ border-radius: 0 0 4px 4px;
         margin-right: 16px;
 }
 
+.social-link {
+        border: none;
+        
+}
 
 .footer-link {
         width: 40px;
@@ -540,13 +540,14 @@ border-radius: 0 0 4px 4px;
         display: flex;
         align-items: center;
         justify-content: center;
+        border: none;
         border-radius: 50%;
 
         transition: background-color var(--transform-style);
 }
 
-.footer-list:focus,
-.footer-list:hover {
+.footer-link:focus,
+.footer-link:hover {
         background-color: var(--footer-social-hover);
 }
 
