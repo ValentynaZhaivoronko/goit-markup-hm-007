@@ -88,6 +88,7 @@ button {
                 }
         }
 
+        
 
         .menu-nav-header {
             display: none;
@@ -111,6 +112,8 @@ button {
         .page-header {
             padding-top: 24px;
             padding-bottom: 24px;
+            border: 1px solid var(--footer-text-color);
+            box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
         }
         
         .page-header-container {
@@ -492,6 +495,7 @@ button {
 /*======== Footer ======== */
 
 .footer {
+    min-width: 427px;
     background-color: var(--primary-text-color);
 }
 
@@ -790,7 +794,126 @@ button {
 
 /*======== /Modal ======== */
 
+/*======== Portfolio-button ========*/
 
+.section-portfolio {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.portfolio-container-btn-all {
+    margin-bottom: 48px;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 24px;
+}
+
+.btn-portfolio {
+        text-align: center;
+        padding: 12px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--button-background);
+        border: 1px solid var(--footer-text-color);
+        border-radius: 4px;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: var(--button-mein-background);
+
+        transition: backgroud-color var(--transform-style), color var(--transform-style);
+}
+
+.btn-portfolio:hover,
+.btn-portfolio:focus {
+    background-color: var(--link-active-text-color);
+    color: var(--mein-background);
+}
+
+/*======== /Portfolio-button ========*/
+
+/*======== Portfolio-img ========*/
+
+.portfolio-img-container {
+    display: block;
+}
+
+.portfolio-img-cart:not(:last-child) {
+    margin-bottom: 48px;
+}
+
+.img-card-content {
+    width: 396px;
+    height: 280px;
+}
+
+.img-card-content-text {
+    padding: 32px 16px;
+    background: #FFFFFF;
+    border: 1px solid #F4F4FD;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.title-card-content {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color) #2E2F42;
+    margin-bottom: 8px;
+}
+
+.text-card-content {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color);
+}
+
+.overlay-on-img {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.overlay-portfolio {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--button-background);
+    background-color: var(--button-mein-background);
+    transform: translate(0, 100%);
+}
+
+.portfolio-img-cart:focus .overlay-portfolio,
+.portfolio-img-cart:hover .overlay-portfolio {
+    transform: translate(0, 0);
+
+}
+
+/*======== /Portfolio-img ========*/
 
 
 

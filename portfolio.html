@@ -13,11 +13,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mobile.style.css" />
+    <link rel="stylesheet" href="./css/tablete.style.css" />
+    <link rel="stylesheet" href="./css/desktop.style.css" />
   </head>
   <body>
     <!-- header -->
-    <header class="page-header portfolio-header">
+    <header class="page-header">
       <div class="container page-header-container">
         <nav class="page-nav page-nav-container">
           <a class="link logo logo-header" href="./index.html"
@@ -25,16 +27,21 @@
           >
           <ul class="menu list menu-nav-header">
             <li class="menu-item-header">
-              <a class="menu-link link" href="./index.html">Studio</a>
+              <a class="menu-link link current" href="./index.html">Studio</a>
             </li>
             <li class="menu-item-header">
-              <a class="menu-link link current" href="">Portfolio</a>
+              <a class="menu-link link" href="./portfolio.html">Portfolio</a>
             </li>
             <li class="menu-item-header">
               <a class="menu-link link" href="">Contacts</a>
             </li>
           </ul>
         </nav>
+        <button type="button" class="button btn-menu-mobile" data-menu-open>
+          <svg class="icon-burger" width="32" height="22">
+            <use href="./images/deco-elements/sprite.svg.svg#icon-menu"></use>
+          </svg>
+        </button>
         <address class="kontackt">
           <ul class="list kontakt-header-kontainer">
             <li>
@@ -50,10 +57,90 @@
           </ul>
         </address>
       </div>
+      <div class="mobile-menu" data-menu>
+        <div class="container container-mobile">
+          <button
+            type="button"
+            class="button button-close-mobile"
+            data-menu-close
+          >
+            <svg width="8" height="8">
+              <use
+                href="./images/deco-elements/sprite.svg.svg#icon-close-black"
+              ></use>
+            </svg>
+          </button>
+          <ul class="nav-mobile">
+            <li class="list nav-mobile-item">
+              <a class="link menu-item-header-mobile" href="./index.html"></a
+              >Studio
+            </li>
+            <li class="list nav-mobile-item">
+              <a
+                class="link menu-item-header-mobile"
+                href="./portfolio.html"
+              ></a
+              >Portfolio
+            </li>
+            <li class="list nav-mobile-item">
+              <a class="link menu-item-header-mobile" href=""></a>Contacts
+            </li>
+          </ul>
+          <div class="mobile-menu-second">
+            <ul class="adress-mobile">
+              <li class="list adress-mobile-item">
+                <a class="link tel-numer-mobile" href="tel:110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="list adress-mobile-item">
+                <a class="link imail-mobile" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="sosial-mobile">
+              <li class="list sosial-mobile-item">
+                <a class="social-mobile-link" href=""
+                  ><svg class="social-mobile-icon" width="24" height="24">
+                    <use
+                      href="./images/deco-elements/sprite.svg.svg#icon-instagramsvg"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="list sosial-mobile-item">
+                <a class="social-mobile-link" href=""
+                  ><svg class="social-mobile-icon" width="24" height="24">
+                    <use
+                      href="./images/deco-elements/sprite.svg.svg#icon-twittersvg"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="list sosial-mobile-item">
+                <a class="social-mobile-link" href=""
+                  ><svg class="social-mobile-icon" width="24" height="24">
+                    <use
+                      href="./images/deco-elements/sprite.svg.svg#icon-facebook"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="list sosial-mobile-item">
+                <a class="social-mobile-link" href=""
+                  ><svg class="social-mobile-icon" width="24" height="24">
+                    <use
+                      href="./images/deco-elements/sprite.svg.svg#icon-linkedinsvg"
+                    ></use></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
+
     <main>
       <!-- secttion-button -->
-      <section class="section">
+      <section class="section section-portfolio">
         <div class="container">
           <h1 hidden>Link-button</h1>
           <div class="container portfolio-container-btn-all">
@@ -283,7 +370,7 @@
         </div>
         <div class="footer-social">
           <p class="footer-title"><b>Social media</b></p>
-          <ul class="list">
+          <ul class="list footer-list-ul">
             <li class="footer-list">
               <a class="footer-link" href="" rel="noopener noreferrer"
                 ><svg class="footer-icon" width="16" height="16">
