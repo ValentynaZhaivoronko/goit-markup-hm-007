@@ -171,12 +171,12 @@ button {
         
         .nav-mobile-item {
             display: block;
-        
             font-weight: 700;
-            font-size: 36px;
-            line-height: 1.1;
-            letter-spacing: 0.02em;
-            text-transform: capitalize;
+                font-size: 36px;
+                line-height: 1.1;
+                letter-spacing: 0.02em;
+                text-transform: capitalize;
+            
         }
         
         .nav-mobile-item:not(:last-child) {
@@ -184,11 +184,19 @@ button {
         }
         
         .menu-item-header-mobile {
+            
+            display: block;
+               font-weight: 700;
+            font-size: 36px;
+            line-height: 1.1;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
             height: 100%;
             transition: color var(--transform-style);
         }
 
-        .menu-item-header-mobile:focus {
+        .menu-item-header-mobile:focus,
+        .menu-item-header-mobile:hover {
             color: var(--link-active-text-color);
         }
     
